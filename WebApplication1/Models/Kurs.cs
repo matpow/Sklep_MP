@@ -8,6 +8,9 @@ namespace WebApplication1.Models
 {
     public class Kurs
     {
+        [Key]
+        public int KursId { get; set; }
+        public int KategoriaId { get; set; }
         [Required]
         public string Nazwa_Kursu { get; set; }
         [Required]
