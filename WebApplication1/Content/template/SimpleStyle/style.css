@@ -19,7 +19,7 @@ img
 { border: 0;}
 
 h1, h2, h3, h4, h5, h6 
-{ font: normal 250% 'Yanone Kaffeesatz', arial, sans-serif;
+{ font: normal 250% , 'Yanone Kaffeesatz' , arial ,  sans-serif;
   color: #444;
   margin: 0 0 15px 0;
   padding: 5px 0 5px 0;}
@@ -152,11 +152,13 @@ ul#menu li a
   float: left; 
   height: 20px;
   padding: 7px 23px 15px 23px;
-  text-align: center;} 
+  text-align: center;}
 
 ul#menu li.current a
-{ height: 20px;
-  padding: 6px 22px 15px 22px;}
+{
+        height: 20px;
+        padding: 6px 22px 15px 22px;
+    }
 
 ul#menu li.current a
 { background: #fff;
