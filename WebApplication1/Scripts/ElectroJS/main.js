@@ -28,13 +28,17 @@
 			dots: false,
 			arrows: true,
 			appendArrows: $nav ? $nav : false,
-			responsive: [{
+            responsive:
+        [
+                {
 	        breakpoint: 991,
-	        settings: {
+	        settings: 
+                    {
 	          slidesToShow: 2,
 	          slidesToScroll: 1,
 	        }
-	      },
+                }
+                    ,
 	      {
 	        breakpoint: 480,
 	        settings: {

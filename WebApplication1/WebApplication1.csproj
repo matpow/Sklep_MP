@@ -174,7 +174,7 @@
     <Compile Include="Models\DaneUzytkownika.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Kategoria.cs" />
-    <Compile Include="Models\Kurs.cs" />
+    <Compile Include="Models\Produkt.cs" />
     <Compile Include="Models\PozycjaKoszyka.cs" />
     <Compile Include="Models\PozycjaZamowienia.cs" />
     <Compile Include="Models\Zamowienie.cs" />
@@ -194,6 +194,7 @@
     <Content Include="Content\Template_electro\electro\font-awesome.min.css" />
     <Content Include="Content\Template_electro\electro\Images\hotdeal.png" />
     <Content Include="Content\Template_electro\electro\Images\logo.png" />
+    <Content Include="Content\Template_electro\electro\Images\Logo_from_passion.png" />
     <Content Include="Content\Template_electro\electro\Images\product01.png" />
     <Content Include="Content\Template_electro\electro\Images\product02.png" />
     <Content Include="Content\Template_electro\electro\Images\product03.png" />

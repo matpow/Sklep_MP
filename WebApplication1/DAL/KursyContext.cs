@@ -20,7 +20,7 @@ namespace WebApplication1.DAL
             return new KursyContext();
         }
 
-        public virtual DbSet<Kurs> Kursy { get; set; }
+        public virtual DbSet<Produkt> Kursy { get; set; }
         public virtual DbSet<Kategoria> Kategorie { get; set; }
         public virtual DbSet<Zamowienie> Zamowienia { get; set; }
         public DbSet<PozycjaZamowienia> PozycjeZamowienia { get; set; }

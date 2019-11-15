@@ -16,7 +16,7 @@ namespace WebApplication1.Models
         public string OpisKategorii { get; set; }
         public string NazwaPlikuIkony { get; set; }
 
-        public virtual ICollection<Kurs> Kursy { get; set; } //Kolekcja ICollection<T> to kolekcja dziedzicząca po IEnumerable<T>.
+        public virtual ICollection<Produkt> Kursy { get; set; } //Kolekcja ICollection<T> to kolekcja dziedzicząca po IEnumerable<T>.
         //W przeciwieństwie
         //do IEnumerable<T> pozwala dodawać oraz usuwać elementy kolekcji.Wykorzystywana
         //jest w Entity Framework do opisu relacji pomiędzy tabelami.

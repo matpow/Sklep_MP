@@ -12,20 +12,20 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 
     <!-- Bootstrap -->
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/Template_electro/electro/bootstrap.min.css" />
 
     <!-- Slick -->
-    <link type="text/css" rel="stylesheet" href="css/slick.css" />
-    <link type="text/css" rel="stylesheet" href="css/slick-theme.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/Template_electro/electro/slick.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/Template_electro/electro/slick-theme.css" />
 
     <!-- nouislider -->
-    <link type="text/css" rel="stylesheet" href="css/nouislider.min.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/Template_electro/electro/nouislider.min.css" />
 
     <!-- Font Awesome Icon -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/Template_electro/electro/font-awesome.min.css">
 
     <!-- Custom stlylesheet -->
-    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/Template_electro/electro/style.css" />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,15 +36,16 @@
 
 </head>
 <body>
+    @RenderBody()
     <!-- HEADER -->
     <header>
         <!-- TOP HEADER -->
         <div id="top-header">
             <div class="container">
                 <ul class="header-links pull-left">
-                    <li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
-                    <li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
-                    <li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
+                    <li><a href="#"><i class="fa fa-phone"></i> 605-000-99</a></li>
+                    <li><a href="#"><i class="fa fa-envelope-o"></i> kleos13@wp.pl</a></li>
+                    <li><a href="#"><i class="fa fa-map-marker"></i> Warszawa, Unnamed 12a</a></li>
                 </ul>
                 <ul class="header-links pull-right">
                     <li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
@@ -63,7 +64,7 @@
                     <div class="col-md-3">
                         <div class="header-logo">
                             <a href="#" class="logo">
-                                <img src="./img/logo.png" alt="">
+                                <img src="~/Content/Template_electro/electro/Images/logo.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -181,7 +182,7 @@
     <!-- /NAVIGATION -->
     <!-- SECTION -->
     <div class="section">
-        @RenderBody()
+
         <!-- container -->
         <div class="container">
             <!-- row -->
@@ -644,7 +645,7 @@
     <!-- /SECTION -->
     <!-- SECTION -->
     <div class="section">
-        @RenderBody()
+
         <!-- container -->
         <div class="container">
             <!-- row -->
@@ -1055,11 +1056,11 @@
     </footer>
     <!-- /FOOTER -->
     <!-- jQuery Plugins -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/nouislider.min.js"></script>
-    <script src="js/jquery.zoom.min.js"></script>
+    <script src="~/Scripts/ElectroJS/jquery.min.js"></script>
+    <script src="~/Scripts/ElectroJS/bootstrap.min.js"></script>
+    <script src="~/Scripts/ElectroJS/slick.min.js"></script>
+    <script src="~/Scripts/ElectroJS/nouislider.min.js"></script>
+    <script src="~/Scripts/ElectroJS/jquery.zoom.min.js"></script>
     <script src="~/Scripts/ElectroJS/main.js"></script>
 
 </body>

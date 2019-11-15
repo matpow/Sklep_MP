@@ -7,7 +7,7 @@ namespace WebApplication1.Models
 {
     public class PozycjaKoszyka
     {
-        public Kurs Kurs { get; set; }
+        public Produkt Produkt { get; set; }
         public int Ilosc { get; set; }
         public decimal Wartosc { get; set; }
     }

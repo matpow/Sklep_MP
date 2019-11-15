@@ -28,7 +28,7 @@ namespace WebApplication1.DAL
             kategorie.ForEach(k => context.Kategorie.AddOrUpdate(k));
             context.SaveChanges();
 
-            var kursy = new List<Kurs>
+            var kursy = new List<Produkt>
             {
                 
 

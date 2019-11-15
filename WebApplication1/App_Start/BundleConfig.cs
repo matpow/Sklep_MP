@@ -20,10 +20,20 @@ namespace WebApplication1
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/bootstrap.min.js",
+                      "~/Scripts/jquery.min.js",
+                      "~/Scripts/main.js",
+                      "~/Scripts/nouislider.min.js",
+                      "~/Scripts/slick.min.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/template/SimpleStyle/style.css"));
+                      "~/Content/template/electro/style.css",
+                      "~/Content/template/electro/slick.css",
+                      "~/Content/template/electro/slick-theme.css",
+                      "~/Content/template/electro/nouislider.min.css",
+                      "~/Content/template/electro/font-awesome.min.css",
+                      "~/Content/template/electro/slickbootstrap.min.css"));
         }
     }
 }
