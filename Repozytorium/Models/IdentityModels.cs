@@ -8,7 +8,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 
 
-namespace WebApplication1.Models
+namespace Repozytorium.Models
 {
     public class ApplicationUser : IdentityUser
     {

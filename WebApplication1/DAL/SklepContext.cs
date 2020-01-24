@@ -2,27 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using WebApplication1.Models;
+using Repozytorium.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace WebApplication1.DAL
 {
-    public class KursyContext : IdentityDbContext<ApplicationUser> // klasa kontekstu
+    public class SklepContext : IdentityDbContext<ApplicationUser> // klasa kontekstu
     {
-        public KursyContext() : base("KursyContext")
+        public SklepContext() : base("Sklep_MP")
         {
         }
 
-        public static KursyContext Create()
+        public static SklepContext Create()
         {
-            return new KursyContext();
+            return new SklepContext();
         }
 
-        public virtual DbSet<Produkt> Kursy { get; set; }
-        public virtual DbSet<Kategoria> Kategorie { get; set; }
-        public virtual DbSet<Zamowienie> Zamowienia { get; set; }
+        public virtual DbSet<Produkt> Produkt { get; set; }
+        //public virtual DbSet<Kategoria> Kategorie { get; set; }
+        public virtual DbSet<Zamowienie> Zamowienie { get; set; }
         public DbSet<PozycjaZamowienia> PozycjeZamowienia { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

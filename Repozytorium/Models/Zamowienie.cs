@@ -4,14 +4,15 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication1.Models
+namespace Repozytorium.Models
 {
     public class Zamowienie
     {
+        [Key]
         public int ZamowienieID { get; set; }
-
         public string UserId { get; set; }
 
+        
         public virtual ApplicationUser User { get; set; }
 
         [Required(ErrorMessage = "Wprowadz imię")]

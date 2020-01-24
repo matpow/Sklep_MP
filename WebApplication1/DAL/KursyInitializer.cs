@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.Entity;
-using WebApplication1.Models;
+using Repozytorium.Models;
 using System.Data.Entity.Migrations;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -12,7 +12,7 @@ namespace WebApplication1.DAL
 {
     public class KursyInitializer 
     {
-        public static void SeedKursyData(KursyContext context)
+        /*public static void SeedKursyData(KursyContext context)
         {
             var kategorie = new List<Kategoria>
             {
@@ -28,17 +28,17 @@ namespace WebApplication1.DAL
             kategorie.ForEach(k => context.Kategorie.AddOrUpdate(k));
             context.SaveChanges();
 
-            var kursy = new List<Produkt>
+            var Produkty = new List<Produkt>
             {
                 
 
             };
-            kursy.ForEach(k => context.Kursy.AddOrUpdate(k));
+            Produkty.ForEach(k => context.Produkt.AddOrUpdate(k));
             context.SaveChanges();
 
-        }
+        }*/
 
-        public static void SeedUzytkownicy(KursyContext db)
+        public static void SeedUzytkownicy(SklepContext db)
         {
             var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(db));

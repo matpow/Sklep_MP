@@ -857,7 +857,7 @@ textarea.input {
 
 .product {
   position: relative;
-  margin: 15px 0px;
+  margin:15px 0px;
   -webkit-box-shadow: 0px 0px 0px 0px #E4E7ED, 0px 0px 0px 1px #E4E7ED;
   box-shadow: 0px 0px 0px 0px #E4E7ED, 0px 0px 0px 1px #E4E7ED;
   -webkit-transition: 0.2s all;
@@ -875,6 +875,7 @@ textarea.input {
 
 .product .product-img>img {
   width: 100%;
+  
 }
 
 .product .product-img .product-label {
@@ -906,7 +907,7 @@ textarea.input {
   padding: 15px;
   background-color: #FFF;
   text-align: center;
-  z-index: 20;
+  z-index: 50;
 }
 
 .product .product-body .product-category {

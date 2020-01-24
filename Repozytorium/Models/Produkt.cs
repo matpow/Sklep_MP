@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 
-namespace WebApplication1.Models
+namespace Repozytorium.Models
 {
     public class Produkt
     {
@@ -24,6 +24,6 @@ namespace WebApplication1.Models
         public bool Bestseller { get; set; }
         public bool Ukryty { get; set; }
         public string OpisSkrocony { get; set; }
-
+        public string Skrot { get; set; }
     }
 }
