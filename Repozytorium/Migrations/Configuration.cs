@@ -6,16 +6,19 @@
     using System.Linq;
     using Repozytorium.Models;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Repozytorium.Models.SklepContext>
+    public sealed class Configuration : DbMigrationsConfiguration<Repozytorium.Models.SklepContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-            AutomaticMigrationDataLossAllowed = true;
+            AutomaticMigrationsEnabled = false;
+            
+            ContextKey = "Repozytorium.Models.SklepContext";
         }
 
         protected override void Seed(Repozytorium.Models.SklepContext context)
         {
+            SklepIinitializer.SeedSklepData(context);
+            
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method

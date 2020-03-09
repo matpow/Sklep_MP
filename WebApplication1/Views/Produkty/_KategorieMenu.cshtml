@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Repozytorium.Models.Kategoria>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<nav id="navigation">
+    <!-- container -->
+    <div class="container">
+        <!-- responsive-nav -->
+        <div id="responsive-nav">
+            <!-- NAV -->
+            <ul class="main-nav nav navbar-nav">
+                @foreach (var kategoria in Model)
+                {
+                    <li>
+                        <a href="@Url.Action("Lista","Produkty", new { NazwaKategorii = kategoria.NazwaKategorii.ToLower() })">
+                            @kategoria.NazwaKategorii
+                        </a>
+                    </li>
+                }
+            </ul>
+            <!-- /NAV -->
+        </div>
+        <!-- /responsive-nav -->
+    </div>
+    <!-- /container -->
+</nav>
+<!-- /NAVIGATION -->
+

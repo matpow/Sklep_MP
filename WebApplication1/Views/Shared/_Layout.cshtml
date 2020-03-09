@@ -1,4 +1,5 @@
-﻿<html>
+﻿
+<html>
 
 <head>
 
@@ -23,7 +24,7 @@
     <link type="text/css" rel="stylesheet" href="~/Content/Template_electro/electro/nouislider.min.css" />
 
     <!-- Font Awesome Icon -->
-    <link rel="stylesheet" href="~/Content/Template_electro/electro/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!-- Custom stlylesheet -->
     <link type="text/css" rel="stylesheet" href="~/Content/Template_electro/electro/style.css" />
@@ -59,7 +60,7 @@
                     <!-- LOGO -->
                     <div class="col-md-3">
                         <div class="header-logo">
-                            <a href="#" class="logo">
+                            <a  class="logo" href=@Url.Action("Index","Home")>
                                 <img src="~/Content/Template_electro/electro/Images/logo.png" alt="">
                             </a>
                         </div>
@@ -154,6 +155,23 @@
     </header>
     <!-- /HEADER -->
 
+    <!-- NAVIGATION -->
+    <nav id="navigation">
+        <!-- container -->
+        <div class="container">
+            <!-- responsive-nav -->
+            <div id="responsive-nav">
+
+                <!-- NAV -->
+                
+                <!-- /NAV -->
+                
+            </div>
+            <!-- /responsive-nav -->
+        </div>
+        <!-- /container -->
+    </nav>
+    <!-- /NAVIGATION -->
 
     <div>
         @RenderBody()
@@ -199,11 +217,11 @@
                         <div class="footer">
                             <h3 class="footer-title">Informacje</h3>
                             <ul class="footer-links">
-                                <li>@Html.ActionLink("O nas", "StronyStatyczne","Home", new { nazwa = "Onas"}, null) </li>
+                                <li>@Html.ActionLink("O nas", "StronyStatyczne", "Home", new { nazwa = "Onas" }, null) </li>
                                 <li>@Html.ActionLink("Kontakt", "StronyStatyczne", "Home", new { nazwa = "Kontakt" }, null)</li>
                                 <li>@Html.ActionLink("Polityka prywatnosci", "StronyStatyczne", "Home", new { nazwa = "PolitykaPrywatnosci" }, null)</li>
                                 <li>@Html.ActionLink("Zamowienia i zwroty", "StronyStatyczne", "Home", new { nazwa = "ZamowieniaZwroty" }, null)</li>
-                                <li>@Html.ActionLink("Warunki", "StronyStatyczne","Home", new { nazwa = "Warunki"}, null)</li>
+                                <li>@Html.ActionLink("Warunki", "StronyStatyczne", "Home", new { nazwa = "Warunki" }, null)</li>
                             </ul>
                         </div>
                     </div>

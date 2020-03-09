@@ -907,7 +907,7 @@ textarea.input {
   padding: 15px;
   background-color: #FFF;
   text-align: center;
-  z-index: 50;
+  z-index: 20;
 }
 
 .product .product-body .product-category {
@@ -1087,23 +1087,23 @@ textarea.input {
 }
 
 .product-widget+.product-widget {
-  margin: 30px 0px;
+  margin: 10px 0px;
 }
 
 .product-widget .product-img {
   position: absolute;
   left: 0px;
   top: 0px;
-  width: 60px;
+  width: 10px;
 }
 
 .product-widget .product-img>img {
-  width: 100%;
+  width: 500%;
 }
 
 .product-widget .product-body {
-  padding-left: 75px;
-  min-height: 60px;
+  padding-left: 5px;
+  min-height: 10px;
 }
 
 .product-widget .product-body .product-category {
@@ -1182,7 +1182,7 @@ textarea.input {
 .products-tabs>.tab-pane.active {
   opacity: 1;
   visibility: visible;
-  height: auto;
+  height: 95%;
 }
 
 .products-slick-nav {
@@ -1615,14 +1615,14 @@ textarea.input {
 \*----------------------------*/
 
 #product-tab {
-  margin-top: 60px;
+  margin-top: 10px;
 }
 
 #product-tab .tab-nav {
   position: relative;
   text-align: center;
-  padding: 15px 0px;
-  margin-bottom: 30px;
+  padding: 5px 0px;
+  margin-bottom: 3px;
 }
 
 #product-tab .tab-nav:after {
@@ -1630,7 +1630,7 @@ textarea.input {
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
+  top: 10%;
   height: 1px;
   background-color: #E4E7ED;
   z-index: -1;
@@ -1639,11 +1639,11 @@ textarea.input {
 #product-tab .tab-nav li {
   display: inline-block;
   background: #FFF;
-  padding: 0px 15px;
+  padding: 0px 5px;
 }
 
 #product-tab .tab-nav li+li {
-  margin-left: 15px;
+  margin-left: 5px;
 }
 
 #product-tab .tab-nav li a {
@@ -1660,14 +1660,14 @@ textarea.input {
   content: "";
   display: block;
   width: 0%;
-  height: 2px;
+  height: 1px;
   background-color: #D10024;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }
 
 #product-tab .tab-nav li a:hover:after, #product-tab .tab-nav li a:focus:after, #product-tab .tab-nav li.active a:after {
-  width: 100%;
+  width: 50%;
 }
 
 /*-- Rating --*/

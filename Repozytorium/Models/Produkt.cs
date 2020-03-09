@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
-
+using System.ComponentModel.DataAnnotations.Schema;
 namespace Repozytorium.Models
 {
     public class Produkt
     {
-        [Key]
-        public int ProduktId { get; set; }
-        public int KategoriaId { get; set; }
+        
+        public int ProduktId { get; set; }       
+        public int KategoriaId { get; set; }        
         [Required]
         public string Nazwa_produktu { get; set; }
         [Required]
@@ -25,5 +25,7 @@ namespace Repozytorium.Models
         public bool Ukryty { get; set; }
         public string OpisSkrocony { get; set; }
         public string Skrot { get; set; }
+
+        public virtual Kategoria kategoria { get; set; }
     }
 }

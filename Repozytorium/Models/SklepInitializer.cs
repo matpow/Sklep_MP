@@ -4,39 +4,43 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 using Repozytorium.Models;
+using Repozytorium.Migrations;
 using System.Data.Entity.Migrations;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Runtime.Remoting.Contexts;
+//using System.Configuration;
 
-namespace WebApplication1.DAL
+namespace Repozytorium.Models
 {
-    public class KursyInitializer 
-    {
-        /*public static void SeedKursyData(KursyContext context)
+    public class SklepIinitializer : MigrateDatabaseToLatestVersion<SklepContext, Configuration>
+    {       
+        public static void SeedSklepData(SklepContext context)
         {
             var kategorie = new List<Kategoria>
             {
-                new Kategoria() { KategoriaId=1, NazwaKategorii="Asp.Net", NazwaPlikuIkony="aspnet.png", OpisKategorii="programowanie w asp net" },
-                new Kategoria() { KategoriaId=2, NazwaKategorii="JavaScript", NazwaPlikuIkony="javascript.png", OpisKategorii="skryptowy język programowania" },
-                new Kategoria() { KategoriaId=3, NazwaKategorii="jQuery", NazwaPlikuIkony="jquery.png", OpisKategorii="lekka biblioteka programistyczna dla języka JavaScript" },
-                new Kategoria() { KategoriaId=4, NazwaKategorii="Html5", NazwaPlikuIkony="html.png", OpisKategorii="język wykorzystywany do tworzenia i prezentowania stron internetowych www" },
-                new Kategoria() { KategoriaId=5, NazwaKategorii="Css3", NazwaPlikuIkony="css.png", OpisKategorii="język służący do opisu formy prezentacji (wyświetlania) stron www" },
-                new Kategoria() { KategoriaId=6, NazwaKategorii="Xml", NazwaPlikuIkony="xml.png", OpisKategorii="uniwersalny język znaczników przeznaczony do reprezentowania różnych danych w strukturalizowany sposób" },
-                new Kategoria() { KategoriaId=7, NazwaKategorii="C#", NazwaPlikuIkony="csharp.png", OpisKategorii="obiektowy język programowania zaprojektowany dla platformy .Net" }
+                new Kategoria() {KategoriaId = 1, NazwaKategorii = "Odziez", OpisKategorii= "odziez sportowa" },
+                new Kategoria() {KategoriaId = 2, NazwaKategorii = "Obuwie", OpisKategorii= "odziez sportowa" },
+                new Kategoria() {KategoriaId = 3, NazwaKategorii = "Sprzet", OpisKategorii= "odziez sportowa" }
             };
-
-            kategorie.ForEach(k => context.Kategorie.AddOrUpdate(k));
+            kategorie.ForEach(k => context.Kategoria.AddOrUpdate(k));
             context.SaveChanges();
 
             var Produkty = new List<Produkt>
             {
-                
-
+                new Produkt() { ProduktId = 1,KategoriaId=1,Nazwa_produktu="Kurtka 4f meska",Cena=399,Producent="4f",
+                    DataDodania = DateTime.Now,Bestseller=true,OpisProduktu="kurtka sportowa zimowa wysokiej jakosci",NazwaPlikuObrazka="P1_kurtka4f.jpg"},
+                new Produkt() { ProduktId = 2,KategoriaId=2,Nazwa_produktu="Buty nike mercurial",Cena=299,Producent="Nike",
+                    DataDodania = DateTime.Now,Bestseller=true,OpisProduktu="buty sportowe",NazwaPlikuObrazka="P2_butynike.jpg"},
+                new Produkt() { ProduktId = 3,KategoriaId=3,Nazwa_produktu="Pilka nozna adidas",Cena=99,Producent="Adidas",
+                    DataDodania = DateTime.Now,Bestseller=true,OpisProduktu="pilka nozna",NazwaPlikuObrazka = "P3_pilkaadidas.jpg"}
             };
+
             Produkty.ForEach(k => context.Produkt.AddOrUpdate(k));
             context.SaveChanges();
+        }
 
-        }*/
+        
 
         public static void SeedUzytkownicy(SklepContext db)
         {

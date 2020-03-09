@@ -8,6 +8,7 @@ namespace Repozytorium.Models
 {
     public class Kategoria
     {
+        
         public int KategoriaId { get; set; }
         [Required(ErrorMessage = "Wprowadz nazwę kategorii")]
         [StringLength(100)]
@@ -16,7 +17,7 @@ namespace Repozytorium.Models
         public string OpisKategorii { get; set; }
         public string NazwaPlikuIkony { get; set; }
 
-        public virtual ICollection<Produkt> Kursy { get; set; } //Kolekcja ICollection<T> to kolekcja dziedzicząca po IEnumerable<T>.
+        public virtual ICollection<Produkt> Produkty{ get; set; } //Kolekcja ICollection<T> to kolekcja dziedzicząca po IEnumerable<T>.
         //W przeciwieństwie
         //do IEnumerable<T> pozwala dodawać oraz usuwać elementy kolekcji.Wykorzystywana
         //jest w Entity Framework do opisu relacji pomiędzy tabelami.

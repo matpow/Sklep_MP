@@ -5,15 +5,22 @@ using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Web;
+using Repozytorium.Models;
 
 namespace Repozytorium.Models
 {
-    public class SklepContext : DbContext
+    public class SklepContext : IdentityDbContext<ApplicationUser>
     {
         public SklepContext() 
             : base("Sklep_MP")
         {
         }
+
+        static  SklepContext()
+        {
+            Database.SetInitializer<SklepContext>(new SklepIinitializer());
+        }
+
 
         public static SklepContext Create()
         {
@@ -23,6 +30,7 @@ namespace Repozytorium.Models
         public virtual DbSet<Produkt> Produkt { get; set; }
         //public virtual DbSet<Kategoria> Kategorie { get; set; }
         public virtual DbSet<Zamowienie> Zamowienie { get; set; }
+        public virtual DbSet<Kategoria> Kategoria { get; set; }
         public DbSet<PozycjaZamowienia> PozycjeZamowienia { get; set; }
         public virtual DbSet<Uzytkownik> Uzytkownik { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
