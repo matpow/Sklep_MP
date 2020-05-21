@@ -15,7 +15,7 @@ namespace Repozytorium.Models
 {
     public class SklepIinitializer : MigrateDatabaseToLatestVersion<SklepContext, Configuration>
     {       
-        public static void SeedSklepData(SklepContext context)
+        public static  void SeedSklepData(SklepContext context)
         {
             var kategorie = new List<Kategoria>
             {
@@ -28,10 +28,10 @@ namespace Repozytorium.Models
 
             var Produkty = new List<Produkt>
             {
-                new Produkt() { ProduktId = 1,KategoriaId=1,Nazwa_produktu="Kurtka 4f meska",Cena=399,Producent="4f",
-                    DataDodania = DateTime.Now,Bestseller=true,OpisProduktu="kurtka sportowa zimowa wysokiej jakosci",NazwaPlikuObrazka="P1_kurtka4f.jpg"},
-                new Produkt() { ProduktId = 2,KategoriaId=2,Nazwa_produktu="Buty nike mercurial",Cena=299,Producent="Nike",
-                    DataDodania = DateTime.Now,Bestseller=true,OpisProduktu="buty sportowe",NazwaPlikuObrazka="P2_butynike.jpg"},
+                new Produkt() { ProduktId = 1,KategoriaId=1,Nazwa_produktu="Kurtka 4f meska",Cena=399,Producent="4f"
+                   ,DataDodania=DateTime.Now, Bestseller=true,OpisProduktu="kurtka sportowa zimowa wysokiej jakosci",NazwaPlikuObrazka="P1_kurtka4f.jpg"},
+                new Produkt() { ProduktId = 2,KategoriaId=2,Nazwa_produktu="Buty nike mercurial",Cena=299,Producent="Nike"
+                    ,DataDodania=DateTime.Now ,Bestseller=true,OpisProduktu="buty sportowe",NazwaPlikuObrazka="P2_butynike.jpg"},
                 new Produkt() { ProduktId = 3,KategoriaId=3,Nazwa_produktu="Pilka nozna adidas",Cena=99,Producent="Adidas",
                     DataDodania = DateTime.Now,Bestseller=true,OpisProduktu="pilka nozna",NazwaPlikuObrazka = "P3_pilkaadidas.jpg"}
             };

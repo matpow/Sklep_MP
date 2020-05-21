@@ -11,5 +11,6 @@ namespace Repozytorium.ViewModels
         public IEnumerable<Kategoria> Kategorie { get; set; } //IEnumerable - interfejs ktory zwraca dowolna kolekcje(najlepsza praktyka)
         public IEnumerable<Produkt> Nowosci { get; set; }
         public IEnumerable<Produkt> Bestsellery { get; set; }
+        public IEnumerable<Produkt> Powiazane { get; set; }
     }
 }

@@ -24,6 +24,13 @@ namespace WebApplication1
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "ProduktSzczegoly",
+                url: "kurs-{id}.html",
+                defaults: new { controller = "Produkt", action = "Szczegoly" }
+                );
+
         }
     }
 }

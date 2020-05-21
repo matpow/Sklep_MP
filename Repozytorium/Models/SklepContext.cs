@@ -29,15 +29,15 @@ namespace Repozytorium.Models
 
         public virtual DbSet<Produkt> Produkt { get; set; }
         //public virtual DbSet<Kategoria> Kategorie { get; set; }
-        public virtual DbSet<Zamowienie> Zamowienie { get; set; }
-        public virtual DbSet<Kategoria> Kategoria { get; set; }
-        public DbSet<PozycjaZamowienia> PozycjeZamowienia { get; set; }
-        public virtual DbSet<Uzytkownik> Uzytkownik { get; set; }
+        public  virtual DbSet<Zamowienie> Zamowienie { get; set; }
+        public  virtual DbSet<Kategoria> Kategoria { get; set; }
+        public  DbSet<PozycjaZamowienia> PozycjeZamowienia { get; set; }
+        public  virtual DbSet<Uzytkownik> Uzytkownik { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<IdentityUserLogin>().HasKey<string>(l => l.UserId);
-            modelBuilder.Entity<IdentityRole>().HasKey<string>(r => r.Id);
-            modelBuilder.Entity<IdentityUserRole>().HasKey(r => new { r.RoleId, r.UserId });
+           // modelBuilder.Entity<IdentityUserLogin>().HasKey<string>(l => l.UserId);
+            //modelBuilder.Entity<IdentityRole>().HasKey<string>(r => r.Id);
+           // modelBuilder.Entity<IdentityUserRole>().HasKey(r => new { r.RoleId, r.UserId });
             base.OnModelCreating(modelBuilder);
 
             // using System.Data.Entity.ModelConfiguration.Conventions;

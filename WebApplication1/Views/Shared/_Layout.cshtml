@@ -29,7 +29,7 @@
     <!-- Custom stlylesheet -->
     <link type="text/css" rel="stylesheet" href="~/Content/Template_electro/electro/style.css" />
 
-   
+
 </head>
 
 
@@ -46,7 +46,7 @@
                 </ul>
                 <ul class="header-links pull-right">
                     <li><a href="#"><i class="fa fa-dollar"></i> zł</a></li>
-                    <li><a href="#"><i class="fa fa-user-o"></i> Moje konto</a></li>
+                    <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Moje konto</a></li>
                 </ul>
             </div>
         </div>
@@ -60,7 +60,7 @@
                     <!-- LOGO -->
                     <div class="col-md-3">
                         <div class="header-logo">
-                            <a  class="logo" href=@Url.Action("Index","Home")>
+                            <a class="logo" href=@Url.Action("Index","Home")>
                                 <img src="~/Content/Template_electro/electro/Images/logo.png" alt="">
                             </a>
                         </div>
@@ -75,8 +75,11 @@
                                     <option value="1">Category 01</option>
                                     <option value="1">Category 02</option>
                                 </select>
-                                <input class="input" placeholder="Search here">
-                                <button class="search-btn">Search</button>
+                                <input class="input" id="search-filter" type="search" name="searchQuery"
+                                       data-autocomplete-source="@Url.Action("ProduktyPodpowiedzi")"
+                                       placeholder="Wyszukaj..." />
+
+                                <button class="search-btn" type="submit" value="">Szukaj</button>
                             </form>
                         </div>
                     </div>
@@ -98,39 +101,20 @@
                                 <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                                     <i class="fa fa-shopping-cart"></i>
                                     <span>Your Cart</span>
-                                    <div class="qty">3</div>
+                                    <div class="qty">@Html.Action("PobierzIloscElementowKoszyka", "Koszyk")</div>
                                 </a>
                                 <div class="cart-dropdown">
                                     <div class="cart-list">
-                                        <div class="product-widget">
-                                            <div class="product-img">
-                                                <img src="./img/product01.png" alt="">
-                                            </div>
-                                            <div class="product-body">
-                                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                                <h4 class="product-price"><span class="qty">1x</span>$980.00</h4>
-                                            </div>
-                                            <button class="delete"><i class="fa fa-close"></i></button>
-                                        </div>
+                                        
 
-                                        <div class="product-widget">
-                                            <div class="product-img">
-                                                <img src="./img/product02.png" alt="">
-                                            </div>
-                                            <div class="product-body">
-                                                <h3 class="product-name"><a href="#">product name goes here</a></h3>
-                                                <h4 class="product-price"><span class="qty">3x</span>$980.00</h4>
-                                            </div>
-                                            <button class="delete"><i class="fa fa-close"></i></button>
-                                        </div>
                                     </div>
                                     <div class="cart-summary">
-                                        <small>3 Item(s) selected</small>
-                                        <h5>SUBTOTAL: $2940.00</h5>
+                                        <small>@Html.Action("PobierzIloscElementowKoszyka","Koszyk")   Item(s) selected</small>
+                                        <h5>SUBTOTAL: @Html.Action("PobierzCeneCalkowita","Koszyk") zł</h5>
                                     </div>
                                     <div class="cart-btns">
                                         <a href="#">View Cart</a>
-                                        <a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+                                        <a href=@Url.Action("Koszyk","Koszyk") >Checkout  <i class="fa fa-arrow-circle-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -154,7 +138,6 @@
         <!-- /MAIN HEADER -->
     </header>
     <!-- /HEADER -->
-
     <!-- NAVIGATION -->
     <nav id="navigation">
         <!-- container -->
@@ -163,9 +146,8 @@
             <div id="responsive-nav">
 
                 <!-- NAV -->
-                
                 <!-- /NAV -->
-                
+
             </div>
             <!-- /responsive-nav -->
         </div>
@@ -281,5 +263,35 @@
     <script src="js/nouislider.min.js"></script>
     <script src="js/jquery.zoom.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/jquery-ui-1.12.1.js"></script>
+    <script src="js/jquery-ui-1.12.1.min.js"></script>
+
+    @section Scritpts
+        {
+        @System.Web.Optimization.Scripts.Render("~/bundles/jqueryAndJqueryUI");
+    }
+
+    <script>
+        $(function () {
+            var setAutoComplete = function () {
+                var $input = $(this);
+
+                var options =
+                    {
+                        source: $input.attr("data-autocomplete-source"),
+                        select: function (event, ui) {
+                            $input = $(this);
+                            $input.val(ui.item.label);
+                            var $form = $input.parents("form:first");
+                            $form.submit();
+                        }
+                    };
+                $input.autocomplete(options);
+            };
+
+            $("#search-filter").each(setAutoComplete);
+        });
+    </script>
+
 </body>
 </html>
